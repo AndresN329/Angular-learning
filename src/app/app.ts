@@ -3,10 +3,19 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('Angular-learning');
+  title = signal('angular-basico');
+
+  count = signal(0);
+  isVisible = signal(true);
+
+  users = signal ([
+    {id: 1, name: "ana"},
+    {id: 2, name: "juan"}
+  ]);
 }
