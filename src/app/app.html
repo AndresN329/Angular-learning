@@ -6,4 +6,12 @@
 
 <button (click)="toggle()">Show/Hide text</button>
 
+@if (isVisible()) {
+  <p>This text depends on the state</p>
+}
+
 <button (click)="addUser()">Add user</button>
+
+@for (user of users(); track user.id) {
+  <p>{{user.name}}</p>
+}
