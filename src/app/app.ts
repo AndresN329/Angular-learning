@@ -14,8 +14,25 @@ export class App {
   count = signal(0);
   isVisible = signal(true);
 
+  increment() {
+    this.count.update(v => v + 1);
+  }
+
+  toggle() {
+    this.isVisible.update(v => !v);
+  }
+
   users = signal ([
     {id: 1, name: "ana"},
     {id: 2, name: "juan"}
   ]);
+
+  addUser() {
+    this.users.update(list => [
+      ...list,
+      {id: Date.now(), name: "Nuevo"}
+    ]);
+  }
 }
+
+
