@@ -30,52 +30,54 @@ src/
 angular-learning/
 ├─ src/
 │  ├─ app/
-│  │  ├─ app.ts            # App component logic (signals/state)
-│  │  ├─ app.html          # App template (@if, @for, bindings)
-│  │  ├─ app.css           # App styles
-│  │  ├─ app.config.ts     # Application-level providers/config
-│  │  └─ app.routes.ts     # Routes (when needed)
-│  ├─ index.html           # Base HTML shell
-│  ├─ main.ts              # Entry point (bootstrapApplication)
-│  └─ styles.css           # Global styles
-├─ public/                 # Static public assets
-├─ .gitignore
-├─ angular.json
-├─ package.json
-├─ package-lock.json
-├─ tsconfig.json
-└─ README.md
+│  │  ├─ components/
+│  │  │  └─ counter/
+│  │  │     ├─ counter.ts        # Reusable Counter component (Input/Output logic)
+│  │  │     ├─ counter.html      # Counter UI (button + value)
+│  │  │     ├─ counter.css       # Counter styles
+│  │  │     └─ counter.spec.ts   # Counter unit tests
+│  │  ├─ app.ts                  # Parent component (signals/state + handlers)
+│  │  ├─ app.html                # Main template (@if/@for + component usage)
+│  │  ├─ app.css                 # App styles
+│  │  ├─ app.config.ts           # App-wide configuration/providers
+│  │  └─ app.routes.ts           # Routes (if/when needed)
+│  ├─ index.html                 # Base HTML shell
+│  ├─ main.ts                    # App bootstrap (bootstrapApplication)
+│  └─ styles.css                 # Global styles
+├─ public/                       # Static public assets
+├─ .gitignore                    # Ignored files (e.g., node_modules)
+├─ angular.json                  # Angular workspace config
+├─ package.json                  # Dependencies + scripts
+├─ package-lock.json             # Locked dependency versions
+├─ tsconfig.json                 # TypeScript config
+└─ README.md                     # Project overview + learning log
+
 ```
 
 Progress is primarily documented through the **Git commit history**, where each commit represents a concrete concept or improvement.
 
-## 🧭 Learning Progress
-- **Day 1**
-  - Angular project setup (standalone)
-  - Basic project structure and bootstrap
+> I’m using Git tags as daily checkpoints (first time using tags) — e.g., `day-02`, `day-03`.
 
-- **Day 2**
+## 🧭 Learning Progress
+- **Day 1 (done)**
+  - Angular project setup (standalone)
+  - Basic project structure (Angular CLI)
+  - App bootstrap (`main.ts` with `bootstrapApplication`)
+
+- **Day 2 (done — tag: `day-02`)**
   - Signals as reactive UI state (`signal`, `set`, `update`)
   - Event binding (`(click)`) to update state
   - Modern control flow in templates: `@if` and `@for` (with `track`)
 
-- **Day 3 (in progress)**
-  - Reusable components
-  - Parent → child communication with `@Input()`
-  - Child → parent communication with `@Output()`
-  - Keeping state in the parent (Signals) and UI/actions in the child
+- **Day 3 (done — tag: `day-03`)**
+  - Built a reusable `CounterComponent`
+  - Parent → child communication with `@Input()` (`[value]="count()"`)
+  - Child → parent communication with `@Output()` (`(valueChange)="count.set($event)"`)
+  - Kept state in the parent (Signals) and UI/actions in the child
+  - Imported the child component in a standalone parent (`imports: [CounterComponent]`)
 
 > Detailed progress can be explored through the commit history.
 
-## 📝 Commit Convention
-I follow a simple and clear convention (small, meaningful commits):
-
-- `init: create angular project`
-- `feat: add reactive state with signals (day 2)`
-- `feat: handle user interaction with event binding (day 2)`
-- `feat: use modern angular templates with @if and @for (day 2)`
-- `feat: add reusable counter component with @Input/@Output (day 3)` *(planned)*
-- `docs: update README`
 
 ## ▶️ Running the Project
 ```bash
