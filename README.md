@@ -78,6 +78,27 @@ Progress is primarily documented through the **Git commit history**, where each 
 
 > Detailed progress can be explored through the commit history.
 
+## 📝 Commit Convention
+I follow small, meaningful commits using a simple Conventional Commits style:
+
+- `init:` project initialization
+- `feat:` new functionality or learning milestone
+- `docs:` documentation-only changes
+- `refactor:` code changes that don’t add features (cleanup/improvements)
+- `chore:` tooling/config/dependency maintenance (no feature changes)
+
+**Examples**
+- `init: create angular project`
+- `feat: add reactive state with signals (day 2)`
+- `feat: handle user interaction with event binding (day 2)`
+- `feat: use modern angular templates with @if and @for (day 2)`
+- `feat: implement parent-child communication with @Input/@Output (day 3)`
+- `feat: connect counter component to parent signal state (day 3)`
+- `docs: update README`
+- `refactor: simplify component logic`
+- `chore: update dependencies`
+
+> Full history is available in the commit log.
 
 ## ▶️ Running the Project
 ```bash
