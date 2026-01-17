@@ -15,3 +15,9 @@
 @for (user of users(); track user.id) {
   <p>{{user.name}}</p>
 }
+<!--Progress day 3-->
+<h2>Day 3</h2>
+<app-counter
+  [value]="count()"
+  (valueChange)="count.set($event)">
+</app-counter>

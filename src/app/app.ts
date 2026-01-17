@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CounterComponent } from './components/counter/counter'; //import CounterComponent in app.ts
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CounterComponent], //add CounterComponet to imports
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
