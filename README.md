@@ -26,8 +26,9 @@ Learn Angular in a **structured and practical way**, emphasizing:
 This repository contains **one Angular project** that continuously evolves as new concepts are learned and applied.
 
 ```bash
-src/
 angular-learning/
+├─ docs/
+│  └─ progress.md                # Full day-by-day learning log
 ├─ src/
 │  ├─ app/
 │  │  ├─ components/
@@ -90,6 +91,7 @@ Progress is primarily documented through the **Git commit history**, where each 
   - Used Signals inside a service as a single source of truth
   - Simplified components to focus only on UI concerns
   
+> Full day-by-day progress log: [docs/progress.md](docs/progress.md)  
 > Detailed progress can be explored through the commit history.
 
 ## 📝 Commit Convention
