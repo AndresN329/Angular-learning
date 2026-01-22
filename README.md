@@ -32,18 +32,25 @@ angular-learning/
 │  ├─ app/
 │  │  ├─ components/
 │  │  │  └─ counter/
-│  │  │     ├─ counter.ts        # Reusable Counter component (Input/Output logic)
+│  │  │     ├─ counter.ts        # Counter UI component (uses service via Dependency Injection)
 │  │  │     ├─ counter.html      # Counter UI (button + value)
 │  │  │     ├─ counter.css       # Counter styles
 │  │  │     └─ counter.spec.ts   # Counter unit tests
-│  │  ├─ app.ts                  # Parent component (signals/state + handlers)
+│  │  │
+│  │  ├─ services/
+│  │  │  ├─ counter.ts           # CounterService (shared state + business logic)
+│  │  │  └─ counter.spec.ts      # Service unit tests
+│  │  │
+│  │  ├─ app.ts                  # Root application component
 │  │  ├─ app.html                # Main template (@if/@for + component usage)
 │  │  ├─ app.css                 # App styles
 │  │  ├─ app.config.ts           # App-wide configuration/providers
 │  │  └─ app.routes.ts           # Routes (if/when needed)
+│  │
 │  ├─ index.html                 # Base HTML shell
 │  ├─ main.ts                    # App bootstrap (bootstrapApplication)
 │  └─ styles.css                 # Global styles
+│
 ├─ public/                       # Static public assets
 ├─ .gitignore                    # Ignored files (e.g., node_modules)
 ├─ angular.json                  # Angular workspace config
@@ -76,6 +83,13 @@ Progress is primarily documented through the **Git commit history**, where each 
   - Kept state in the parent (Signals) and UI/actions in the child
   - Imported the child component in a standalone parent (`imports: [CounterComponent]`)
 
+- **Day 4 (done — tag: `day-04`)**
+  - Introduced Angular services for shared state
+  - Moved counter business logic from component to service
+  - Used Dependency Injection to provide services to components
+  - Used Signals inside a service as a single source of truth
+  - Simplified components to focus only on UI concerns
+  
 > Detailed progress can be explored through the commit history.
 
 ## 📝 Commit Convention
