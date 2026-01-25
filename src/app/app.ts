@@ -25,7 +25,7 @@ export class App {
     this.isVisible.update(v => !v);
   }
 
-
+constructor(public users: UserService) {}
 }
 
 
