@@ -1,6 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './components/counter/counter'; //import CounterComponent in app.ts
+import { UserService } from './services/user';
+
 
 @Component({
   selector: 'app-root',
