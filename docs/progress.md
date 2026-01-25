@@ -32,6 +32,12 @@ For a short overview, see the main **README.md**.
 - Used Signals inside a service as a single source of truth.
 - Simplified components to focus only on UI concerns.
 
+### Day 5 — HttpClient + Mocks + UI States *(done — tag: day-05)*
+- Enabled `HttpClient` using `provideHttpClient` in app config
+- Created mock data to simulate a backend response
+- Implemented `UserService` to manage users data and UI states
+- Handled **loading**, **error**, and **empty** states explicitly in the UI
+- Connected the App component to the service using dependency injection
 
 ---
 

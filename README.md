@@ -38,9 +38,14 @@ angular-learning/
 │  │  │     ├─ counter.css       # Counter styles
 │  │  │     └─ counter.spec.ts   # Counter unit tests
 │  │  │
+│  │  ├─ mocks/
+│  │  │  └─ users.mock.ts        # Mock users data (simulated backend)
+│  │  │
 │  │  ├─ services/
 │  │  │  ├─ counter.ts           # CounterService (shared state + business logic)
-│  │  │  └─ counter.spec.ts      # Service unit tests
+│  │  │  ├─ counter.spec.ts      # Service unit tests
+│  │  │  ├─ user.service.ts      # UserService (HttpClient + UI states)
+│  │  │  └─ user.spec.ts         # UserService unit tests
 │  │  │
 │  │  ├─ app.ts                  # Root application component
 │  │  ├─ app.html                # Main template (@if/@for + component usage)
@@ -90,6 +95,14 @@ Progress is primarily documented through the **Git commit history**, where each 
   - Used Dependency Injection to provide services to components
   - Used Signals inside a service as a single source of truth
   - Simplified components to focus only on UI concerns
+
+- **Day 5 (done — tag: `day-05`)**
+  - Enabled `HttpClient` using `provideHttpClient` in the app configuration
+  - Created mock data to simulate a backend without a real API
+  - Implemented `UserService` to handle data fetching and UI state
+  - Managed **loading**, **error**, and **empty** states explicitly
+  - Connected the root App component to the service via dependency injection
+  - Kept HTTP and data logic out of components (clean separation of concerns)
   
 > Full day-by-day progress log: [docs/progress.md](docs/progress.md)  
 > Detailed progress can be explored through the commit history.
