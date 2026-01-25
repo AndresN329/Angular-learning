@@ -23,17 +23,7 @@ export class App {
     this.isVisible.update(v => !v);
   }
 
-  users = signal ([
-    {id: 1, name: "ana"},
-    {id: 2, name: "juan"}
-  ]);
 
-  addUser() {
-    this.users.update(list => [
-      ...list,
-      {id: Date.now(), name: "Nuevo"}
-    ]);
-  }
 }
 
 
