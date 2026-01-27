@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { CounterComponent } from '../../../components/counter/counter';
+import { UserService } from '../../../services/user';
 
 @Component({
-  selector: 'app-home',
   standalone: true,
-  imports: [],
+  selector: 'app-home',
+  imports: [CounterComponent],
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrl: './home.css'
 })
 export class HomeComponent {
+  count = signal(0);
+  isVisible = signal(true);
 
+  increment() {
+    this.count.update(v => v + 1);
+  }
+
+  toggle() {
+    this.isVisible.update(v => !v);
+  }
+
+  constructor(public users: UserService) {}
 }
