@@ -38,6 +38,21 @@ angular-learning/
 │  │  │     ├─ counter.css       # Counter styles
 │  │  │     └─ counter.spec.ts   # Counter unit tests
 │  │  │
+│  │  ├─ pages/
+│  │  │  ├─ home/
+│  │  │  │  └─ home-page/
+│  │  │  │     ├─ home.ts        # Home page component
+│  │  │  │     ├─ home.html      # Home page template
+│  │  │  │     ├─ home.css       # Home page styles
+│  │  │  │     └─ home.spec.ts   # Home page unit tests
+│  │  │  │
+│  │  │  └─ users/
+│  │  │     └─ users-page/
+│  │  │        ├─ users.ts       # Users page component
+│  │  │        ├─ users.html     # Users page template
+│  │  │        ├─ users.css      # Users page styles
+│  │  │        └─ users.spec.ts  # Users page unit tests
+│  │  │
 │  │  ├─ mocks/
 │  │  │  └─ users-page.mock.ts        # Mock users-page data (simulated backend)
 │  │  │

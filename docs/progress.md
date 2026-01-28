@@ -39,6 +39,13 @@ For a short overview, see the main **README.md**.
 - Handled **loading**, **error**, and **empty** states explicitly in the UI
 - Connected the App component to the service using dependency injection
 
+### Day 6 — Routing + Lazy Loading (done — tag: day-06)
+- Introduced Angular routing using standalone components.
+- Implemented lazy loading with `loadComponent()` per route.
+- Created a real-world app structure (`pages` vs `components`).
+- Moved feature logic from `AppComponent` to page-level components.
+- Kept `AppComponent` as a clean layout with `RouterOutlet`.
+
 ---
 
 ## Notes
