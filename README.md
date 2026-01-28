@@ -39,7 +39,7 @@ angular-learning/
 │  │  │     └─ counter.spec.ts   # Counter unit tests
 │  │  │
 │  │  ├─ mocks/
-│  │  │  └─ users.mock.ts        # Mock users data (simulated backend)
+│  │  │  └─ users-page.mock.ts        # Mock users-page data (simulated backend)
 │  │  │
 │  │  ├─ services/
 │  │  │  ├─ counter.ts           # CounterService (shared state + business logic)

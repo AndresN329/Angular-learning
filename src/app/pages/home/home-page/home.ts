@@ -4,7 +4,7 @@ import { UserService } from '../../../services/user';
 
 @Component({
   standalone: true,
-  selector: 'app-home',
+  selector: 'app-home-page',
   imports: [CounterComponent],
   templateUrl: './home.html',
   styleUrl: './home.css'

@@ -6,9 +6,9 @@ import { USERS_MOCK } from '../mocks/users.mock';
   providedIn: 'root',
 })
 export class UserService {
-  
-  // holds the list of users
-  users = signal<any[]>([]); 
+
+  // holds the list of users-page
+  users = signal<any[]>([]);
 
   // indicates loading state for the UI
   loading = signal(false);
@@ -16,8 +16,8 @@ export class UserService {
   error = signal<string | null>(null); // stores error message if the request fails
 
   constructor(private http: HttpClient) {}// HttpClient injected for future real APIs
-  
-  // loads users (mocked for now, simulating an API call)
+
+  // loads users-page (mocked for now, simulating an API call)
   loadUsers() {
     this.loading.set(true);
     this.error.set(null);

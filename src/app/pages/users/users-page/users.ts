@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-users',
+  selector: 'app-users-page',
   standalone: true,
   imports: [],
   templateUrl: './users.html',
