@@ -32,19 +32,29 @@ For a short overview, see the main **README.md**.
 - Used Signals inside a service as a single source of truth.
 - Simplified components to focus only on UI concerns.
 
-### Day 5 — HttpClient + Mocks + UI States *(done — tag: day-05)*
+### Day 5 — HttpClient + Mocks + UI States *(done — tag: `day-05`)*
 - Enabled `HttpClient` using `provideHttpClient` in app config
 - Created mock data to simulate a backend response
 - Implemented `UserService` to manage users data and UI states
 - Handled **loading**, **error**, and **empty** states explicitly in the UI
 - Connected the App component to the service using dependency injection
 
-### Day 6 — Routing + Lazy Loading (done — tag: day-06)
+### Day 6 — Routing + Lazy Loading (done — tag: `day-06`)
 - Introduced Angular routing using standalone components.
 - Implemented lazy loading with `loadComponent()` per route.
 - Created a real-world app structure (`pages` vs `components`).
 - Moved feature logic from `AppComponent` to page-level components.
 - Kept `AppComponent` as a clean layout with `RouterOutlet`.
+
+## Week 2 — Clean Architecture + Real Services
+
+### Day 1 — Clean architecture & service design (done — tag: `day-07`)
+- Introduced a clean folder structure (`pages`, `components`, `services`, `models`, `core`).
+- Separated **UI, state, and business logic** following Angular best practices.
+- Created real TypeScript models for domain data (`User`).
+- Refactored `UserService` to fully own state using Signals.
+- Connected page components to services via Dependency Injection.
+- Kept components free of business logic (UI-only responsibility).
 
 ---
 

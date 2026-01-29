@@ -48,25 +48,32 @@ angular-learning/
 │  │  │  │
 │  │  │  └─ users/
 │  │  │     └─ users-page/
-│  │  │        ├─ users.ts       # Users page component
+│  │  │        ├─ users.ts       # Users page component (UI-only, consumes UserService)
 │  │  │        ├─ users.html     # Users page template
 │  │  │        ├─ users.css      # Users page styles
 │  │  │        └─ users.spec.ts  # Users page unit tests
 │  │  │
+│  │  ├─ core/
+│  │  │  └─ .gitkeep             # Reserved for global app concerns (auth, interceptors, guards)
+│  │  │
 │  │  ├─ mocks/
-│  │  │  └─ users-page.mock.ts        # Mock users-page data (simulated backend)
+│  │  │  └─ users.mock.ts        # Mock users data (simulated backend response)
+│  │  │
+│  │  ├─ models/
+│  │  │  ├─ user.model.ts        # User domain model (TypeScript interface)
+│  │  │  └─ .gitkeep             # Keeps folder tracked until more models are added
 │  │  │
 │  │  ├─ services/
 │  │  │  ├─ counter.ts           # CounterService (shared state + business logic)
 │  │  │  ├─ counter.spec.ts      # Service unit tests
-│  │  │  ├─ user.service.ts      # UserService (HttpClient + UI states)
+│  │  │  ├─ user.service.ts      # UserService (state + logic, uses Signals)
 │  │  │  └─ user.spec.ts         # UserService unit tests
 │  │  │
-│  │  ├─ app.ts                  # Root application component
-│  │  ├─ app.html                # Main template (@if/@for + component usage)
+│  │  ├─ app.ts                  # Root application component (layout only)
+│  │  ├─ app.html                # Main template (RouterOutlet + layout)
 │  │  ├─ app.css                 # App styles
 │  │  ├─ app.config.ts           # App-wide configuration/providers
-│  │  └─ app.routes.ts           # Routes (if/when needed)
+│  │  └─ app.routes.ts           # Application routes (lazy-loaded pages)
 │  │
 │  ├─ index.html                 # Base HTML shell
 │  ├─ main.ts                    # App bootstrap (bootstrapApplication)
