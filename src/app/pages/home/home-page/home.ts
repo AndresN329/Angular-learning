@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CounterComponent } from '../../../components/counter/counter';
-import { UserService } from '../../../services/user';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   standalone: true,

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
 import { USERS_MOCK } from '../mocks/users.mock';
+import { UserModel } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root',
@@ -8,14 +9,12 @@ import { USERS_MOCK } from '../mocks/users.mock';
 export class UserService {
 
   // holds the list of users-page
-  users = signal<any[]>([]);
+  users = signal<UserModel[]>([]);
 
   // indicates loading state for the UI
   loading = signal(false);
 
   error = signal<string | null>(null); // stores error message if the request fails
-
-  constructor(private http: HttpClient) {}// HttpClient injected for future real APIs
 
   // loads users-page (mocked for now, simulating an API call)
   loadUsers() {
