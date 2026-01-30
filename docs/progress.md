@@ -56,6 +56,16 @@ For a short overview, see the main **README.md**.
 - Connected page components to services via Dependency Injection.
 - Kept components free of business logic (UI-only responsibility).
 
+### Day 2 — HttpClient & Interceptors (done — tag: `day-08`)
+- Replaced mocked data with real `HttpClient` requests.
+- Implemented a `UserService` using Signals to manage data, loading, and error states.
+- Centralized HTTP logic inside services (no HTTP in components).
+- Created a functional HTTP interceptor for global request logging.
+- Registered interceptors using `provideHttpClient` and `withInterceptors`.
+- Built a reactive UI using `@if`, `@else`, and `@for` to handle all request states.
+- Verified interceptor execution via browser console logs.
+- Prepared the app for future backend integration (Spring Boot).
+
 ---
 
 ## Notes

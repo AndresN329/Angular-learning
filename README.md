@@ -54,7 +54,9 @@ angular-learning/
 │  │  │        └─ users.spec.ts  # Users page unit tests
 │  │  │
 │  │  ├─ core/
-│  │  │  └─ .gitkeep             # Reserved for global app concerns (auth, interceptors, guards)
+│  │  │  └─ interceptors/
+│  │  │     └─ logging.interceptor.ts
+│  │  │        # Global HTTP logging interceptor (logs all outgoing requests)
 │  │  │
 │  │  ├─ mocks/
 │  │  │  └─ users.mock.ts        # Mock users data (simulated backend response)
@@ -66,13 +68,13 @@ angular-learning/
 │  │  ├─ services/
 │  │  │  ├─ counter.ts           # CounterService (shared state + business logic)
 │  │  │  ├─ counter.spec.ts      # Service unit tests
-│  │  │  ├─ user.service.ts      # UserService (state + logic, uses Signals)
+│  │  │  ├─ user.service.ts      # UserService (state + logic, uses Signals + HttpClient)
 │  │  │  └─ user.spec.ts         # UserService unit tests
 │  │  │
 │  │  ├─ app.ts                  # Root application component (layout only)
 │  │  ├─ app.html                # Main template (RouterOutlet + layout)
 │  │  ├─ app.css                 # App styles
-│  │  ├─ app.config.ts           # App-wide configuration/providers
+│  │  ├─ app.config.ts           # App-wide configuration/providers (router, http, interceptors)
 │  │  └─ app.routes.ts           # Application routes (lazy-loaded pages)
 │  │
 │  ├─ index.html                 # Base HTML shell
