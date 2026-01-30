@@ -16,6 +16,8 @@ export class UserService {
 
   error = signal<string | null>(null); // stores error message if the request fails
 
+  constructor(private http: HttpClient) {}
+
   // loads users-page (mocked for now, simulating an API call)
   loadUsers() {
     this.loading.set(true);
