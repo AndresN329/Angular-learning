@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
-import { USERS_MOCK } from '../mocks/users.mock';
 import { UserModel } from '../models/user.model';
 
 @Injectable({
@@ -18,15 +17,20 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  // loads users-page (mocked for now, simulating an API call)
+// loads users from backend API using HttpClient
   loadUsers() {
     this.loading.set(true);
     this.error.set(null);
 
-  // simulate backend response
-  setTimeout(() => {
-    this.users.set(USERS_MOCK);
-    this.loading.set(false);
-  }, 800);
+    this.http.get<UserModel[]>('/api/users').subscribe({
+      next: users => {
+        this.users.set(users);
+        this.loading.set(false);
+      },
+      error: () => {
+        this.error.set('Error loading users');
+        this.loading.set(false);
+      }
+    });
   }
 }
