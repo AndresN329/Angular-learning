@@ -29,6 +29,7 @@ This repository contains **one Angular project** that continuously evolves as ne
 angular-learning/
 ├─ docs/
 │  └─ progress.md                # Full day-by-day learning log
+│
 ├─ src/
 │  ├─ app/
 │  │  ├─ components/
@@ -48,12 +49,20 @@ angular-learning/
 │  │  │  │
 │  │  │  └─ users/
 │  │  │     └─ users-page/
-│  │  │        ├─ users.ts       # Users page component (UI-only, consumes UserService)
+│  │  │        ├─ users.ts       # Users page component (protected by auth guard)
 │  │  │        ├─ users.html     # Users page template
 │  │  │        ├─ users.css      # Users page styles
 │  │  │        └─ users.spec.ts  # Users page unit tests
 │  │  │
 │  │  ├─ core/
+│  │  │  ├─ guards/
+│  │  │  │  ├─ auth.guard.ts     # Functional CanActivate guard (blocks routes if not authenticated)
+│  │  │  │  └─auth.guard.spec.ts # Auth guard unit tests
+│  │  │  │
+│  │  │  ├─ services/
+│  │  │  │  ├─ auth.service.ts   # Auth mock service (signal-based login state)
+│  │  │  │  └─ auth.spec.ts      # Auth service unit tests
+│  │  │  │
 │  │  │  └─ interceptors/
 │  │  │     └─ logging.interceptor.ts
 │  │  │        # Global HTTP logging interceptor (logs all outgoing requests)
@@ -71,11 +80,11 @@ angular-learning/
 │  │  │  ├─ user.service.ts      # UserService (state + logic, uses Signals + HttpClient)
 │  │  │  └─ user.spec.ts         # UserService unit tests
 │  │  │
-│  │  ├─ app.ts                  # Root application component (layout only)
-│  │  ├─ app.html                # Main template (RouterOutlet + layout)
+│  │  ├─ app.ts                  # Root application component (layout + auth controls)
+│  │  ├─ app.html                # Main template (navigation, login/logout, RouterOutlet)
 │  │  ├─ app.css                 # App styles
 │  │  ├─ app.config.ts           # App-wide configuration/providers (router, http, interceptors)
-│  │  └─ app.routes.ts           # Application routes (lazy-loaded pages)
+│  │  └─ app.routes.ts           # Application routes (lazy-loaded pages + auth guards)
 │  │
 │  ├─ index.html                 # Base HTML shell
 │  ├─ main.ts                    # App bootstrap (bootstrapApplication)
@@ -88,6 +97,7 @@ angular-learning/
 ├─ package-lock.json             # Locked dependency versions
 ├─ tsconfig.json                 # TypeScript config
 └─ README.md                     # Project overview + learning log
+
 
 ```
 

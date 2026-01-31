@@ -66,6 +66,17 @@ For a short overview, see the main **README.md**.
 - Verified interceptor execution via browser console logs.
 - Prepared the app for future backend integration (Spring Boot).
 
+### Day 3 — Guards & Auth Mock (done — tag: `day-10`)
+- Implemented a mock `AuthService` using Signals to manage authentication state.
+- Created a functional `CanActivate` guard to protect routes based on auth state.
+- Integrated route protection directly in the router configuration.
+- Added global login/logout controls in the root component.
+- Implemented redirection to home when accessing protected routes unauthenticated.
+- Centralized authentication logic in services (no auth state in components).
+- Followed Angular 21 best practices using functional guards and `inject()`.
+- Simulated real-world route protection without backend dependency.
+
+
 ---
 
 ## Notes
