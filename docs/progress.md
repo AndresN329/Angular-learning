@@ -66,7 +66,7 @@ For a short overview, see the main **README.md**.
 - Verified interceptor execution via browser console logs.
 - Prepared the app for future backend integration (Spring Boot).
 
-### Day 3 — Guards & Auth Mock (done — tag: `day-10`)
+### Day 3 — Guards & Auth Mock (done — tag: `day-09`)
 - Implemented a mock `AuthService` using Signals to manage authentication state.
 - Created a functional `CanActivate` guard to protect routes based on auth state.
 - Integrated route protection directly in the router configuration.
@@ -75,6 +75,16 @@ For a short overview, see the main **README.md**.
 - Centralized authentication logic in services (no auth state in components).
 - Followed Angular 21 best practices using functional guards and `inject()`.
 - Simulated real-world route protection without backend dependency.
+
+### Day 4 — Template-driven Forms & Basic Login (done — tag: `day-10`)
+- Introduced Template-driven Forms using `FormsModule`.
+- Implemented a simple login form with `ngModel` two-way binding.
+- Used `ngForm` to track form state and validity.
+- Added basic validation using `required` attributes.
+- Disabled form submission when the form is invalid.
+- Connected the login form to an existing `AuthService`.
+- Kept authentication logic inside services, not templates.
+- Practiced form handling for simple, real-world use cases (login).
 
 
 ---

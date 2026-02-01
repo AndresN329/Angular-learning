@@ -41,7 +41,7 @@ angular-learning/
 │  │  │
 │  │  ├─ core/
 │  │  │  ├─ guards/
-│  │  │  │  ├─ auth.guard.ts     # Functional CanActivate guard (blocks routes if not authenticated)
+│  │  │  │  ├─ auth.guard.ts      # Functional CanActivate guard (blocks routes if not authenticated)
 │  │  │  │  └─ auth.guard.spec.ts # Auth guard unit tests
 │  │  │  │
 │  │  │  ├─ interceptors/
@@ -49,8 +49,8 @@ angular-learning/
 │  │  │  │     # Global HTTP logging interceptor (logs all outgoing requests)
 │  │  │  │
 │  │  │  └─ services/
-│  │  │     ├─ auth.service.ts   # Auth mock service (signal-based login state)
-│  │  │     └─ auth.spec.ts      # Auth service unit tests
+│  │  │     ├─ auth.service.ts    # Auth mock service (signal-based login state)
+│  │  │     └─ auth.spec.ts       # Auth service unit tests
 │  │  │
 │  │  ├─ mocks/
 │  │  │  └─ users.mock.ts        # Mock users data (simulated backend response)
@@ -66,6 +66,12 @@ angular-learning/
 │  │  │  │     ├─ home.html      # Home page template
 │  │  │  │     ├─ home.css       # Home page styles
 │  │  │  │     └─ home.spec.ts   # Home page unit tests
+│  │  │  │
+│  │  │  ├─ login/
+│  │  │  │  ├─ login.ts          # Login page (template-driven form)
+│  │  │  │  ├─ login.html        # Login form template (ngForm + ngModel)
+│  │  │  │  ├─ login.css         # Login page styles
+│  │  │  │  └─ login.spec.ts     # Login page unit tests
 │  │  │  │
 │  │  │  └─ users/
 │  │  │     └─ users-page/
