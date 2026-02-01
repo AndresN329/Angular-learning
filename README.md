@@ -39,6 +39,26 @@ angular-learning/
 │  │  │     ├─ counter.css       # Counter styles
 │  │  │     └─ counter.spec.ts   # Counter unit tests
 │  │  │
+│  │  ├─ core/
+│  │  │  ├─ guards/
+│  │  │  │  ├─ auth.guard.ts     # Functional CanActivate guard (blocks routes if not authenticated)
+│  │  │  │  └─ auth.guard.spec.ts # Auth guard unit tests
+│  │  │  │
+│  │  │  ├─ interceptors/
+│  │  │  │  └─ logging.interceptor.ts
+│  │  │  │     # Global HTTP logging interceptor (logs all outgoing requests)
+│  │  │  │
+│  │  │  └─ services/
+│  │  │     ├─ auth.service.ts   # Auth mock service (signal-based login state)
+│  │  │     └─ auth.spec.ts      # Auth service unit tests
+│  │  │
+│  │  ├─ mocks/
+│  │  │  └─ users.mock.ts        # Mock users data (simulated backend response)
+│  │  │
+│  │  ├─ models/
+│  │  │  ├─ user.model.ts        # User domain model (TypeScript interface)
+│  │  │  └─ .gitkeep             # Keeps folder tracked until more models are added
+│  │  │
 │  │  ├─ pages/
 │  │  │  ├─ home/
 │  │  │  │  └─ home-page/
@@ -54,26 +74,6 @@ angular-learning/
 │  │  │        ├─ users.css      # Users page styles
 │  │  │        └─ users.spec.ts  # Users page unit tests
 │  │  │
-│  │  ├─ core/
-│  │  │  ├─ guards/
-│  │  │  │  ├─ auth.guard.ts     # Functional CanActivate guard (blocks routes if not authenticated)
-│  │  │  │  └─auth.guard.spec.ts # Auth guard unit tests
-│  │  │  │
-│  │  │  ├─ services/
-│  │  │  │  ├─ auth.service.ts   # Auth mock service (signal-based login state)
-│  │  │  │  └─ auth.spec.ts      # Auth service unit tests
-│  │  │  │
-│  │  │  └─ interceptors/
-│  │  │     └─ logging.interceptor.ts
-│  │  │        # Global HTTP logging interceptor (logs all outgoing requests)
-│  │  │
-│  │  ├─ mocks/
-│  │  │  └─ users.mock.ts        # Mock users data (simulated backend response)
-│  │  │
-│  │  ├─ models/
-│  │  │  ├─ user.model.ts        # User domain model (TypeScript interface)
-│  │  │  └─ .gitkeep             # Keeps folder tracked until more models are added
-│  │  │
 │  │  ├─ services/
 │  │  │  ├─ counter.ts           # CounterService (shared state + business logic)
 │  │  │  ├─ counter.spec.ts      # Service unit tests
@@ -81,9 +81,13 @@ angular-learning/
 │  │  │  └─ user.spec.ts         # UserService unit tests
 │  │  │
 │  │  ├─ app.ts                  # Root application component (layout + auth controls)
+│  │  │
 │  │  ├─ app.html                # Main template (navigation, login/logout, RouterOutlet)
+│  │  │
 │  │  ├─ app.css                 # App styles
+│  │  │
 │  │  ├─ app.config.ts           # App-wide configuration/providers (router, http, interceptors)
+│  │  │
 │  │  └─ app.routes.ts           # Application routes (lazy-loaded pages + auth guards)
 │  │
 │  ├─ index.html                 # Base HTML shell
