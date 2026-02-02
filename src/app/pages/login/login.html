@@ -1,17 +1,15 @@
-<form #form="ngForm" (ngSubmit)="login()">
+<form [formGroup]="form" (ngSubmit)="login()">
 
 <input 
     type="text"
     name="username"
-    [(ngModel)]="username"
-    required
+    formControlName="username"
     placeholder="Username" />
 
 <input 
     type="password"
     name="password"
-    [(ngModel)]="password"
-    required
+    formControlName="password"
     placeholder="Password" />
 
     <button type="submit" [disabled]="form.invalid">
