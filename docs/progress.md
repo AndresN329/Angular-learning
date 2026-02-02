@@ -86,6 +86,16 @@ For a short overview, see the main **README.md**.
 - Kept authentication logic inside services, not templates.
 - Practiced form handling for simple, real-world use cases (login).
 
+### Day 5 — Reactive Forms & Login Refactor (done — tag: `day-11`)
+- Refactored the login feature from Template-driven Forms to Reactive Forms.
+- Replaced `FormsModule` and `ngModel` with `ReactiveFormsModule`.
+- Created a `FormGroup` using `FormBuilder` in the `LoginComponent`.
+- Centralized validation logic in TypeScript using `Validators`.
+- Connected the template using `formGroup` and `formControlName`.
+- Controlled form submission based on form validity.
+- Kept authentication logic inside `AuthService`.
+- Applied professional Angular form patterns used in real projects.
+
 
 ---
 

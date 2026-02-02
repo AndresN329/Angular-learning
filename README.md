@@ -68,8 +68,8 @@ angular-learning/
 │  │  │  │     └─ home.spec.ts   # Home page unit tests
 │  │  │  │
 │  │  │  ├─ login/
-│  │  │  │  ├─ login.ts          # Login page (template-driven form)
-│  │  │  │  ├─ login.html        # Login form template (ngForm + ngModel)
+│  │  │  │  ├─ login.ts          # Login page (Reactive Forms with FormBuilder + Validators)
+│  │  │  │  ├─ login.html        # Login form template (formGroup + formControlName)
 │  │  │  │  ├─ login.css         # Login page styles
 │  │  │  │  └─ login.spec.ts     # Login page unit tests
 │  │  │  │
@@ -107,7 +107,6 @@ angular-learning/
 ├─ package-lock.json             # Locked dependency versions
 ├─ tsconfig.json                 # TypeScript config
 └─ README.md                     # Project overview + learning log
-
 
 ```
 
