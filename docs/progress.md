@@ -96,6 +96,16 @@ For a short overview, see the main **README.md**.
 - Kept authentication logic inside `AuthService`.
 - Applied professional Angular form patterns used in real projects.
 
+### Day 6 — Consolidation & Architecture Review (done)
+- Reviewed existing components to validate responsibility boundaries.
+- Confirmed all HTTP communication lives exclusively inside services.
+- Verified state ownership and usage through Angular signals.
+- Assessed components to ensure focus on UI rendering only.
+- Reinforced architectural mental model (Page / Component / Service / Guard).
+- Reviewed routing protection using existing guards and auth mock.
+- Verified forms validation and control from TypeScript.
+- Focused on code understanding, consistency, and interview-level reasoning.
+
 
 ---
 
