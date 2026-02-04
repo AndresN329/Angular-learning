@@ -12,16 +12,16 @@
 
 <h2>Day 5 Users</h2>
 
-<button (click)="users.loadUsers()">Load users</button>
+<button (click)="store.loadUsers()">Load users</button>
 
-@if (users.loading()) {
+@if (store.loading()) {
   <p>Loading...</p>
-} @else if (users.error()) {
-  <p>{{ users.error() }}</p>
-} @else if (users.users().length === 0) {
+} @else if (store.error()) {
+  <p>{{ store.error() }}</p>
+} @else if (store.users().length === 0) {
   <p>No data</p>
 } @else {
-  @for (user of users.users(); track user.id) {
+  @for (user of store.users(); track user.id) {
     <p>{{ user.name }}</p>
   }
 }

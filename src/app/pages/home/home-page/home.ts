@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { CounterComponent } from '../../../components/counter/counter';
 import { UserStore } from '../../../services/user.store';
+import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'app-home-page',
-  imports: [CounterComponent],
+  imports: [CounterComponent, CommonModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
