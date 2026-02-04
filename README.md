@@ -62,8 +62,8 @@ angular-learning/
 │  │  ├─ pages/
 │  │  │  ├─ home/
 │  │  │  │  └─ home-page/
-│  │  │  │     ├─ home.ts        # Home page component
-│  │  │  │     ├─ home.html      # Home page template
+│  │  │  │     ├─ home.ts        # Home page (injects UserStore and renders users via signals)
+│  │  │  │     ├─ home.html      # Home template (Signal control flow: @if / @for)
 │  │  │  │     ├─ home.css       # Home page styles
 │  │  │  │     └─ home.spec.ts   # Home page unit tests
 │  │  │  │
@@ -75,16 +75,16 @@ angular-learning/
 │  │  │  │
 │  │  │  └─ users/
 │  │  │     └─ users-page/
-│  │  │        ├─ users.ts       # Users page component (protected by auth guard)
-│  │  │        ├─ users.html     # Users page template
+│  │  │        ├─ users.ts       # Users page (injects UserStore, UI-only)
+│  │  │        ├─ users.html     # Users template (renders users from store with signals)
 │  │  │        ├─ users.css      # Users page styles
 │  │  │        └─ users.spec.ts  # Users page unit tests
 │  │  │
 │  │  ├─ services/
 │  │  │  ├─ counter.ts           # CounterService (shared state + business logic)
 │  │  │  ├─ counter.spec.ts      # Service unit tests
-│  │  │  ├─ user.service.ts      # UserService (state + logic, uses Signals + HttpClient)
-│  │  │  └─ user.spec.ts         # UserService unit tests
+│  │  │  ├─ user.store.ts        # UserStore (signal-based application state + HttpClient)
+│  │  │  └─ user.spec.ts         # User store unit tests
 │  │  │
 │  │  ├─ app.ts                  # Root application component (layout + auth controls)
 │  │  │

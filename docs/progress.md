@@ -106,6 +106,20 @@ For a short overview, see the main **README.md**.
 - Verified forms validation and control from TypeScript.
 - Focused on code understanding, consistency, and interview-level reasoning.
 
+## Week 3 — Application State with Signals + REST Integration
+
+### Day 1 — Signal-based state store + real REST integration (done — tag: `day-13`)
+- Introduced **application-level state management** using Angular Signals (no Redux, no NgRx).
+- Applied the **store pattern** using services:
+  - Service as Store
+  - Signals as State
+  - Methods as Actions
+- Refactored `UserService` into a dedicated `UserStore` to make state ownership explicit.
+- Centralized REST integration (`HttpClient`) inside the store.
+- Connected pages (`Home`, `UsersPage`) to the store via Dependency Injection.
+- Rendered UI state using Angular control flow blocks (`@if`, `@for`).
+- Ensured components and pages remain **UI-only**, with no data-fetching logic.
+- Reinforced clear separation between **data, state, and presentation layers**.
 
 ---
 
