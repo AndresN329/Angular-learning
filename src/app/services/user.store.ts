@@ -5,7 +5,7 @@ import { UserModel } from '../models/user.model';
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
+export class UserStore {
 
   // holds the list of users-page
   users = signal<UserModel[]>([]);

@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CounterComponent } from '../../../components/counter/counter';
-import { UserService } from '../../../services/user.service';
+import { UserStore } from '../../../services/user.store';
 
 @Component({
   standalone: true,
@@ -21,5 +21,5 @@ export class HomeComponent {
     this.isVisible.update(v => !v);
   }
 
-  constructor(public users: UserService) {}
+  constructor(public store: UserStore) {}
 }
