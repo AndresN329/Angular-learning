@@ -45,8 +45,11 @@ angular-learning/
 │  │  │  │  └─ auth.guard.spec.ts # Auth guard unit tests
 │  │  │  │
 │  │  │  ├─ interceptors/
-│  │  │  │  └─ logging.interceptor.ts
-│  │  │  │     # Global HTTP logging interceptor (logs all outgoing requests)
+│  │  │  │  ├─ logging.interceptor.ts
+│  │  │  │  │  # Global HTTP logging interceptor (logs all outgoing requests)
+│  │  │  │  │
+│  │  │  │  └─ error.interceptor.ts
+│  │  │  │     # Global HTTP error interceptor (centralizes error handling and logging)
 │  │  │  │
 │  │  │  └─ services/
 │  │  │     ├─ auth.service.ts    # Auth mock service (signal-based login state)
@@ -76,14 +79,14 @@ angular-learning/
 │  │  │  └─ users/
 │  │  │     └─ users-page/
 │  │  │        ├─ users.ts       # Users page (injects UserStore, UI-only)
-│  │  │        ├─ users.html     # Users template (renders users from store with signals)
+│  │  │        ├─ users.html     # Users template (consistent UX: loading / error / content)
 │  │  │        ├─ users.css      # Users page styles
 │  │  │        └─ users.spec.ts  # Users page unit tests
 │  │  │
 │  │  ├─ services/
 │  │  │  ├─ counter.ts           # CounterService (shared state + business logic)
 │  │  │  ├─ counter.spec.ts      # Service unit tests
-│  │  │  ├─ user.store.ts        # UserStore (signal-based application state + HttpClient)
+│  │  │  ├─ user.store.ts        # UserStore (signal-based state, consumes HTTP with global error handling)
 │  │  │  └─ user.spec.ts         # User store unit tests
 │  │  │
 │  │  ├─ app.ts                  # Root application component (layout + auth controls)
@@ -92,7 +95,7 @@ angular-learning/
 │  │  │
 │  │  ├─ app.css                 # App styles
 │  │  │
-│  │  ├─ app.config.ts           # App-wide configuration/providers (router, http, interceptors)
+│  │  ├─ app.config.ts           # App-wide configuration (router, http client, global interceptors)
 │  │  │
 │  │  └─ app.routes.ts           # Application routes (lazy-loaded pages + auth guards)
 │  │

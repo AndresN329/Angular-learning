@@ -121,6 +121,16 @@ For a short overview, see the main **README.md**.
 - Ensured components and pages remain **UI-only**, with no data-fetching logic.
 - Reinforced clear separation between **data, state, and presentation layers**.
 
+### Day 2 — Global error handling + consistent UX (done — tag: `day-14`)
+
+- Implemented a **global HTTP error handling strategy** using a functional `HttpInterceptorFn`.
+- Centralized HTTP error logging to avoid duplicated `console.log` and scattered error logic.
+- Registered multiple interceptors globally via `provideHttpClient` and `withInterceptors`.
+- Simplified stores by handling **only UI-facing error state**, not technical error details.
+- Ensured a **consistent UX pattern** across pages: `loading → error → content`.
+- Kept components and pages **free of try/catch and HTTP error logic**.
+- Reinforced clean responsibility boundaries between **interceptors, stores, and UI**.
+
 ---
 
 ## Notes
