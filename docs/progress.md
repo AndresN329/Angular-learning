@@ -131,6 +131,23 @@ For a short overview, see the main **README.md**.
 - Kept components and pages **free of try/catch and HTTP error logic**.
 - Reinforced clean responsibility boundaries between **interceptors, stores, and UI**.
 
+### Day 3 — Basic unit testing (realistic & minimal) (done — tag: `day-15`)
+
+- Added **unit tests for UserStore** to verify:
+  - service creation
+  - correct initial state
+- Added a **basic unit test for UsersComponent** to ensure the component can be created.
+- Learned and used **TestBed** to create a minimal Angular testing environment.
+- Ran `ng test` and ensured all remaining tests **pass successfully**.
+- Identified and **removed broken or auto-generated specs** that were failing and not aligned with the current app structure.
+- Kept only **tests with real value** (store, component, guard).
+- Prioritized **practical testing over full coverage**.
+
+#### ⚠️ Not done (by choice — not part of the plan)
+- No tests for all components
+- No interceptor tests
+- No HTML-heavy or coverage-driven testing
+
 ---
 
 ## Notes

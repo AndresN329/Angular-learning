@@ -37,12 +37,11 @@ angular-learning/
 │  │  │     ├─ counter.ts        # Counter UI component (uses service via Dependency Injection)
 │  │  │     ├─ counter.html      # Counter UI (button + value)
 │  │  │     ├─ counter.css       # Counter styles
-│  │  │     └─ counter.spec.ts   # Counter unit tests
 │  │  │
 │  │  ├─ core/
 │  │  │  ├─ guards/
 │  │  │  │  ├─ auth.guard.ts      # Functional CanActivate guard (blocks routes if not authenticated)
-│  │  │  │  └─ auth.guard.spec.ts # Auth guard unit tests
+│  │  │  │  └─ auth-guard.spec.ts # Auth guard unit tests
 │  │  │  │
 │  │  │  ├─ interceptors/
 │  │  │  │  ├─ logging.interceptor.ts
@@ -53,7 +52,6 @@ angular-learning/
 │  │  │  │
 │  │  │  └─ services/
 │  │  │     ├─ auth.service.ts    # Auth mock service (signal-based login state)
-│  │  │     └─ auth.spec.ts       # Auth service unit tests
 │  │  │
 │  │  ├─ mocks/
 │  │  │  └─ users.mock.ts        # Mock users data (simulated backend response)
@@ -68,13 +66,11 @@ angular-learning/
 │  │  │  │     ├─ home.ts        # Home page (injects UserStore and renders users via signals)
 │  │  │  │     ├─ home.html      # Home template (Signal control flow: @if / @for)
 │  │  │  │     ├─ home.css       # Home page styles
-│  │  │  │     └─ home.spec.ts   # Home page unit tests
 │  │  │  │
 │  │  │  ├─ login/
 │  │  │  │  ├─ login.ts          # Login page (Reactive Forms with FormBuilder + Validators)
 │  │  │  │  ├─ login.html        # Login form template (formGroup + formControlName)
 │  │  │  │  ├─ login.css         # Login page styles
-│  │  │  │  └─ login.spec.ts     # Login page unit tests
 │  │  │  │
 │  │  │  └─ users/
 │  │  │     └─ users-page/
@@ -85,7 +81,6 @@ angular-learning/
 │  │  │
 │  │  ├─ services/
 │  │  │  ├─ counter.ts           # CounterService (shared state + business logic)
-│  │  │  ├─ counter.spec.ts      # Service unit tests
 │  │  │  ├─ user.store.ts        # UserStore (signal-based state, consumes HTTP with global error handling)
 │  │  │  └─ user.spec.ts         # User store unit tests
 │  │  │
