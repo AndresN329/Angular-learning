@@ -1,16 +1,21 @@
 import { TestBed } from '@angular/core/testing';
+import { UserStore} from './user.store';
 
-import { User } from './user';
-
-describe('User', () => {
-  let service: User;
+describe('UserStore', () => {
+  let store: UserStore;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(User);
+    TestBed.configureTestingModule({
+      providers: [UserStore],
+    });
+    store = TestBed.inject(UserStore);
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
+    expect(store).toBeTruthy();
+  });
+
+  it('should start with empty user', () => {
+    expect(store.users()).toEqual([]);
   });
 });
