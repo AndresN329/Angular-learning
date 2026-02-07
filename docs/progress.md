@@ -148,6 +148,21 @@ For a short overview, see the main **README.md**.
 - No interceptor tests
 - No HTML-heavy or coverage-driven testing
 
+### Day 4 — Production build & deployment fundamentals (done)
+
+- Generated a **production build** using `ng build`, understanding the difference between development (`ng serve`) and production output.
+- Learned that Angular applications are compiled into **static assets** (HTML, JS, CSS) that are served by a backend.
+- Explored the structure of the `dist/` folder and identified the **real deployable output** under `dist/Angular-learning/browser`.
+- Understood the role of `index.html` as the **single entry point** for an Angular SPA.
+- Verified the production build locally by serving static files with `npx serve`.
+- Identified and fixed **SPA routing issues** by enabling server-side fallback to `index.html`.
+- Confirmed correct **lazy-loaded chunk generation** and on-demand loading during navigation.
+- Validated successful **frontend–backend integration** by calling `/api/**` endpoints from the production build.
+- Reinforced the mental model:
+  - Angular = compiled frontend (static files)
+  - Backend = API + static file hosting
+- Recognized common production pitfalls such as hardcoded URLs, missing routing fallback, and assuming Angular runs on the server.
+
 ---
 
 ## Notes
